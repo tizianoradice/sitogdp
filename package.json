@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npm install && echo 'Build completed'"
+    "build": "echo 'Build completed'"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.9.1"
