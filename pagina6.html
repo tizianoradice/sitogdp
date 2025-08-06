@@ -10,9 +10,11 @@
 <body class="pagina-interna6">
     <div class="contenuto">
         <h1>Lista Prodotti</h1>
-        <div class="accesso-protetto">
+        <div class="gestione-prodotti">
             <input type="password" id="password-input" placeholder="Inserisci la password">
-            <button id="carica-prodotti">Carica Prodotti</button>
+            <button id="carica-prodotti">Visualizza Prodotti</button>
+            <button id="aggiungi-riga" style="display:none;">Aggiungi Prodotto</button>
+            <button id="salva-modifiche" style="display:none;">Salva</button>
         </div>
         <table id="tabella-prodotti">
             <thead>
@@ -25,9 +27,6 @@
             <tbody>
                 </tbody>
         </table>
-        <button id="aggiungi-riga">Aggiungi Prodotto</button>
-        <button id="salva-prodotto" style="display:none;">Salva</button>
-        <button id="salva-modifiche" style="display:none;">Salva modifiche</button>
     </div>
     <script src="script-prodotti.js"></script>
 </body>
