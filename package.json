@@ -1,0 +1,11 @@
+{
+  "name": "sito",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'No build command needed for a simple static site' "
+  },
+  "author": "",
+  "license": "ISC"
+}

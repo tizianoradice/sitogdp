@@ -1,0 +1,22 @@
+#tabella-prodotti {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tabella-prodotti th, #tabella-prodotti td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#tabella-prodotti th {
+    background-color: #f2f2f2;
+    color: black; /* O un altro colore a tua scelta */
+}
+
+/* Stile per gli input nella tabella, se decidi di usarli */
+#tabella-prodotti input {
+    width: 90%;
+    box-sizing: border-box;
+}

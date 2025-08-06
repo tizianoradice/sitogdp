@@ -1,0 +1,120 @@
+/* Stili globali */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Previene lo scrolling orizzontale */
+    font-family: sans-serif;
+}
+
+/* Rende l'immagine della homepage responsive */
+#mappa-immagine {
+    width: 100%;
+    height: auto;
+}
+
+/*
+==============================================
+ STILI PER LE PAGINE INTERNE
+==============================================
+*/
+
+/* Stili comuni per tutte le pagine interne */
+.pagina-interna, .pagina-interna1, .pagina-interna2, .pagina-interna3, .pagina-interna4, .pagina-interna5, .pagina-interna6 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #87CEEB; /* Colore del testo: AZZURRO CHIARO (Sky Blue) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombra per migliorare la leggibilità */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* MODIFICA: Allinea il contenuto in alto invece che al centro */
+    min-height: 100vh;
+    padding: 5vh 2em 2em 2em; /* MODIFICA: Aggiunge spazio sopra e ai lati */
+    box-sizing: border-box;   /* MODIFICA: Assicura che il padding non crei problemi di layout */
+}
+
+/* Sfondi specifici per le diverse pagine */
+.pagina-interna {
+    background-image: url('pagine.jpg');
+}
+
+.pagina-interna1 {
+    background-image: url('pagina1.jpg');
+}
+
+
+.pagina-interna2 {
+    background-image: url('pagina2.jpg');
+	
+}
+
+
+.pagina-interna3 {
+    background-image: url('pagina3.jpg');
+	
+}
+
+
+.pagina-interna4 {
+    background-image: url('pagina4.jpg');
+	
+}
+
+
+.pagina-interna5 {
+    background-image: url('pagina5.jpg');
+	
+}
+
+.pagina-interna6 {
+    background-image: url('pagina6.jpg');
+	
+}
+
+
+/* Stili per il contenitore del testo */
+.contenuto {
+    background-color: transparent;
+    text-align: center;
+    max-width: 90%;
+}
+
+/* Stili responsive per i titoli e i paragrafi */
+h1 {
+    font-size: clamp(30px, 10vw, 50px);
+}
+
+p {
+    font-size: clamp(20px, 4vw, 22px);
+    line-height: 1.0;
+}
+
+/*
+==============================================
+ GALLERIA IMMAGINI
+==============================================
+*/
+.galleria-immagini {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.galleria-immagini img {
+    width: calc(50% - 10px);
+    object-fit: cover;
+    height: auto;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .galleria-immagini img {
+        width: 100%; /* Su schermi piccoli, le immagini occupano tutta la larghezza */
+    }
+}

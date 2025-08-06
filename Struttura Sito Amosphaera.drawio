@@ -1,0 +1,163 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.6">
+  <diagram name="Pagina-1" id="UYsFUdyV3ch4jVetOuxL">
+    <mxGraphModel dx="1026" dy="1688" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-1" value="&lt;div style=&quot;line-height: 110%;&quot;&gt;&lt;div&gt;&lt;font style=&quot;font-size: 26px; line-height: 110%;&quot;&gt;&lt;b&gt;AMOSPHAERA&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="294.5" y="-10" width="251" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-2" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;CHI&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-3" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;COSA&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-4" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;DOVE&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-5" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;PERCHÈ&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-6" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;QUANDO&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-7" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;1&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="75" y="70" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-8" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;2&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="230" y="70" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-9" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;3&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="388.5" y="70" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-11" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;4&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="555" y="70" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-12" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;5&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="700" y="70" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-13" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;PRODOTTI&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="340" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-14" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;6&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="395" y="270" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-16" value="URNA CINERARIA&lt;div&gt;SPAZIALE&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="41" y="545" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-17" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;9&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="396" y="480" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-18" value="GOLF&lt;div&gt;DIFFUSORE&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="196" y="545" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-19" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;7&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="76" y="480" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-20" value="GOLF&lt;div&gt;SEGNAPOSTO&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="361" y="545" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-21" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;8&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="241" y="480" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-22" value="GOLF&lt;div&gt;PORTACHIAVI&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="521" y="545" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-23" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;10&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="556" y="480" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-24" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;11&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="701" y="480" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-25" value="DIFFUSORE" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="666" y="545" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-29" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="400" as="sourcePoint" />
+            <mxPoint x="140" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-30" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="410" as="sourcePoint" />
+            <mxPoint x="290" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-31" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="410" as="sourcePoint" />
+            <mxPoint x="420" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-32" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="410" as="sourcePoint" />
+            <mxPoint x="550" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-33" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="400" as="sourcePoint" />
+            <mxPoint x="690" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-34" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;12&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="75" y="660" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-35" value="BOTTE&lt;div&gt;PICCOLA&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="725" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-36" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;13&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="240" y="660" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-37" value="TAVOLINO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="725" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-38" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;14&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="395" y="660" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-39" value="MINUTO&lt;div&gt;DICIASSETTE&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="725" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-40" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;15&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="555" y="660" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-41" value="ALBERO&lt;div&gt;DI&lt;/div&gt;&lt;div&gt;NATALE&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="725" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-42" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;16&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="700" y="660" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-43" value="SGABELLO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="725" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-44" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;17&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="242.5" y="830" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-45" value="CORNICE" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="197.5" y="895" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-46" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;18&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="397.5" y="830" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-47" value="LIBRERIA&lt;div&gt;VERTICALE&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="362.5" y="895" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-48" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;19&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="557.5" y="830" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-49" value="UOVO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="522.5" y="895" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Kfnoz-o3A36fatD4IOvq-51" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="220" as="sourcePoint" />
+            <mxPoint x="380" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

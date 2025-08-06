@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMOSPHAERA</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio controls loop>
+      <source src="musica.mp3" type="audio/mpeg">
+      Il tuo browser non supporta l'elemento audio.
+    </audio>
+
+    <img src="homepage.jpg" usemap="#mappa-aree" alt="Home Page con aree cliccabili" id="mappa-immagine">
+
+    <map name="mappa-aree">
+        <area shape="circle" coords="879,766,74" href="pagina1.html" alt="CHI">
+        <area shape="rect" coords="622,968,486,828" href="pagina2.html" alt="COSA">
+        <area shape="rect" coords="449,1000,283,781" href="pagina3.html" alt="DOVE">
+        <area shape="rect" coords="276,1002,180,779" href="pagina4.html" alt="PERCHÈ">
+        <area shape="rect" coords="1,703,183,845" href="pagina5.html" alt="QUANDO">
+    </map>
+
+    <script src="responsive-map.js"></script>
+
+</body>
+</html>

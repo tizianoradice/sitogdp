@@ -1,0 +1,129 @@
+Ciao! Ottima idea. Realizzare un sito come lo descrivi è un progetto perfetto per iniziare, perché è visivamente d'impatto ma tecnicamente molto semplice e, soprattutto, può essere realizzato a costo quasi nullo.
+
+Il modo in assoluto **più semplice ed economico** è usare del semplice codice **HTML e CSS**, senza bisogno di pagare per piattaforme complesse come WordPress, Wix o Squarespace, che sarebbero eccessive per le tue necessità.
+
+Non preoccuparti se non hai mai scritto codice, ti guiderò passo dopo passo.
+
+### Il Concetto Chiave: Mappa Immagine (Image Map)
+
+La tecnologia perfetta per il tuo scopo si chiama "mappa immagine" HTML. Ti permette di definire aree cliccabili (nel tuo caso, cerchi) direttamente su un'immagine, associando a ciascuna area un link diverso.
+
+---
+
+### Guida Passo-Passo alla Creazione
+
+Ecco tutto ciò di cui hai bisogno e i passaggi da seguire.
+
+#### 1. Gli Strumenti Necessari (Costo: 0€)
+* **Un editor di testo:** Va benissimo il Blocco Note di Windows o TextEdit su Mac. Per un'esperienza migliore, ti consiglio [Visual Studio Code](https://code.visualstudio.com/), che è gratuito e ti aiuta con i colori e la sintassi.
+* **La tua immagine:** L'immagine che vuoi usare per la home page.
+* **Un browser web:** Chrome, Firefox, Safari, etc. (che stai già usando).
+
+#### 2. La Struttura dei File
+Crea una cartella sul tuo computer (es. "MioSito") e al suo interno crea questi file:
+
+* `index.html` (sarà la tua Home Page con l'immagine)
+* `pagina1.html`
+* `pagina2.html`
+* `pagina3.html`
+* `pagina4.html`
+* `pagina5.html`
+* `style.css` (questo file conterrà lo stile per rendere l'immagine a tutto schermo)
+* Metti anche la tua immagine in questa cartella, per semplicità chiamiamola `sfondo.jpg`.
+
+#### 3. Trovare le Coordinate dei Cerchi
+Questa è l'unica parte "complicata". Devi dire al codice dove si trovano i tuoi cerchi sull'immagine. Per un cerchio, hai bisogno di 3 valori:
+* La coordinata **X** del centro
+* La coordinata **Y** del centro
+* Il **raggio** del cerchio (la sua dimensione)
+
+Il modo più semplice per trovare questi valori è usare un tool online gratuito. Cerca su Google "**HTML Image Map Generator**" e troverai molti siti (come [questo](https://www.image-map.net/)) dove puoi caricare la tua immagine, disegnare i cerchi sopra, e il sito ti genererà automaticamente il codice con le coordinate esatte.
+
+#### 4. Il Codice per la Home Page (`index.html`)
+Apri il file `index.html` con il tuo editor di testo e incolla questo codice.
+
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Sito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img src="sfondo.jpg" usemap="#mappa-aree" alt="Home Page con aree cliccabili">
+
+    <map name="mappa-aree">
+        <area shape="circle" coords="X1,Y1,RAGGIO1" href="pagina1.html" alt="Descrizione area 1">
+        <area shape="circle" coords="X2,Y2,RAGGIO2" href="pagina2.html" alt="Descrizione area 2">
+        <area shape="circle" coords="X3,Y3,RAGGIO3" href="pagina3.html" alt="Descrizione area 3">
+        <area shape="circle" coords="X4,Y4,RAGGIO4" href="pagina4.html" alt="Descrizione area 4">
+        <area shape="circle" coords="X5,Y5,RAGGIO5" href="pagina5.html" alt="Descrizione area 5">
+    </map>
+
+</body>
+</html>
+```
+**Cosa devi modificare:**
+* Cambia `sfondo.jpg` se la tua immagine ha un nome diverso.
+* Sostituisci `X1,Y1,RAGGIO1`, `X2,Y2,RAGGIO2`, etc., con le coordinate che hai ottenuto dal tool online.
+
+#### 5. Il Codice per lo Stile (`style.css`)
+Questo codice serve a far sì che la tua immagine occupi l'intera pagina. Apri `style.css` e incolla questo:
+
+```css
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Nasconde le barre di scorrimento */
+}
+
+img {
+    width: 100vw; /* 100% della larghezza della finestra */
+    height: 100vh; /* 100% dell'altezza della finestra */
+    object-fit: cover; /* Fa sì che l'immagine copra tutto lo spazio senza deformarsi */
+}
+```
+
+#### 6. Il Codice per le Altre Pagine (es. `pagina1.html`)
+Apri `pagina1.html` e inserisci un contenuto base. Fai lo stesso per le altre 4 pagine, cambiando il titolo e il testo.
+
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina 1</title>
+</head>
+<body>
+    <h1>Benvenuto nella Pagina 1</h1>
+    <p>Questo è il contenuto della prima pagina.</p>
+    <a href="index.html">Torna alla Home</a>
+</body>
+</html>
+```
+
+A questo punto, se apri il file `index.html` con il tuo browser, vedrai il tuo sito funzionare perfettamente in locale sul tuo PC!
+
+---
+
+### Mettere il Sito Online (Hosting a Costo 0€)
+
+Ora che il sito funziona sul tuo computer, devi pubblicarlo su Internet. Per un sito "statico" come il tuo (fatto solo di HTML, CSS e immagini), esistono servizi di hosting **totalmente gratuiti e perfetti per te**.
+
+Le opzioni più popolari e semplici sono:
+1.  **GitHub Pages:** Se hai un account GitHub, puoi caricare la tua cartella e attivare Pages con un click. È il metodo più usato dagli sviluppatori per progetti personali.
+2.  **Netlify:** Forse il più semplice di tutti. Ti registri gratuitamente, trascini la tua cartella "MioSito" direttamente nella loro interfaccia web e il tuo sito sarà online in pochi secondi con un indirizzo del tipo `nome-a-caso.netlify.app`.
+3.  **Vercel** o **Cloudflare Pages**: Funzionano in modo molto simile a Netlify e sono ottime alternative.
+
+### Riepilogo dei Vantaggi di Questo Metodo
+
+* **Costo:** 0€. Non devi pagare abbonamenti mensili. L'unica spesa facoltativa sarebbe l'acquisto di un nome di dominio personalizzato (es. `www.ilmiosito.it`), che costa circa 10-15€ all'anno, ma puoi iniziare tranquillamente con l'indirizzo gratuito fornito da Netlify o GitHub.
+* **Semplicità:** Una volta capito il meccanismo, è un semplice copia-incolla e modifica di coordinate.
+* **Controllo Totale:** Hai il pieno controllo su ogni aspetto, senza le limitazioni di un costruttore di siti web.
+* **Velocità:** Un sito statico è incredibilmente veloce da caricare per i visitatori.
+
+In bocca al lupo per il tuo progetto!
