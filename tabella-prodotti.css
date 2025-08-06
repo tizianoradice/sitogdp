@@ -12,11 +12,31 @@
 
 #tabella-prodotti th {
     background-color: #f2f2f2;
-    color: black; /* O un altro colore a tua scelta */
+    color: black;
 }
 
-/* Stile per gli input nella tabella, se decidi di usarli */
+/* Larghezza delle colonne come richiesto */
+#tabella-prodotti th:nth-child(1), #tabella-prodotti td:nth-child(1) {
+    width: 35%; /* Nome Prodotto più largo */
+}
+
+#tabella-prodotti th:nth-child(2), #tabella-prodotti td:nth-child(2) {
+    width: 15%; /* Codice più stretto */
+    max-width: 12ch; /* Limita a 12 caratteri */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#tabella-prodotti th:nth-child(3), #tabella-prodotti td:nth-child(3) {
+    width: 50%; /* Descrizione più larga */
+}
+
 #tabella-prodotti input {
     width: 90%;
     box-sizing: border-box;
+}
+
+/* Stile per le celle modificabili */
+.editable {
+    cursor: pointer;
 }
