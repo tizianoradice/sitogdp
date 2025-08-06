@@ -22,13 +22,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 corpoTabella.appendChild(nuovaRiga);
             });
+            // Nasconde i bottoni di modifica quando si è in modalità visualizzazione
+            bottoneAggiungi.style.display = 'none';
+            bottoneSalva.style.display = 'none';
         } catch (error) {
             console.error('Errore durante il recupero dei prodotti:', error);
             alert('Errore durante il caricamento dei prodotti. Riprova più tardi.');
         }
     }
     
-    // Funzione per caricare i prodotti in modalità edit
+    // Funzione per caricare i prodotti in modalità modifica
     async function caricaModificaProdotti() {
         const password = passwordInput.value;
         if (!password) {
@@ -46,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             if (!response.ok) {
-                throw new Error('Errore di autenticazione. Password non valida.');
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Errore di autenticazione. Password non valida.');
             }
 
             const prodotti = await response.json();
@@ -119,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const response = await fetch('/.netlify/functions/add-product', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'x-password': password },
-                    body: JSON.stringify(nuovi[0]) // Assumendo un solo nuovo prodotto alla volta
+                    body: JSON.stringify(nuovi[0])
                 });
                 if (!response.ok) throw new Error('Errore salvataggio nuovo prodotto');
             }
@@ -168,6 +172,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Event listener per il pulsante "Visualizza Prodotti"
+    // Se la password è presente, il bottone avvia la modalità di modifica.
+    bottoneCarica.addEventListener('click', function() {
+        const password = passwordInput.value;
+        if (password) {
+            caricaModificaProdotti();
+        } else {
+            visualizzaProdotti();
+        }
+    });
+
     // Gestione dell'aggiunta di una nuova riga con input
     bottoneAggiungi.addEventListener('click', function() {
         const password = passwordInput.value;
@@ -186,12 +201,8 @@ document.addEventListener('DOMContentLoaded', function() {
         corpoTabella.appendChild(nuovaRiga);
     });
 
-    // Event listener per il pulsante "Visualizza Prodotti" (per il visitatore)
-    bottoneCarica.addEventListener('click', visualizzaProdotti);
-
-    // Event listener per il pulsante "Salva" (per il cliente)
+    // Event listener per il pulsante "Salva"
     bottoneSalva.addEventListener('click', salvaTutto);
 
-    // Carica i prodotti all'avvio per i visitatori
     visualizzaProdotti();
 });
