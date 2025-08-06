@@ -15,7 +15,6 @@ export const handler = async (event, context) => {
     const { updates } = JSON.parse(event.body);
     const sql = neon(process.env.NETLIFY_DATABASE_URL);
 
-    // Controlla se ci sono modifiche da elaborare
     if (!updates || updates.length === 0) {
       return {
         statusCode: 400,
@@ -23,26 +22,13 @@ export const handler = async (event, context) => {
       };
     }
 
-    // Mappiamo le modifiche in un array di promesse per eseguire le query
     const promises = updates.map(update => {
-      // Per ogni aggiornamento, costruiamo la query UPDATE in modo sicuro
-      if (!update.id) {
-        throw new Error('ID prodotto mancante per l\'aggiornamento');
-      }
-
-      const fields = [];
-      const values = [];
-
-      // Aggiungiamo i campi da aggiornare solo se sono presenti
-      if (update.nome) { fields.push('nome = $' + (fields.length + 1)); values.push(update.nome); }
-      if (update.codice) { fields.push('codice = $' + (fields.length + 1)); values.push(update.codice); }
-      if (update.descrizione) { fields.push('descrizione = $' + (fields.length + 1)); values.push(update.descrizione); }
-
-      // Aggiungiamo l'ID del prodotto come ultimo valore per la clausola WHERE
-      values.push(update.id);
-      
-      const query = `UPDATE prodotti SET ${fields.join(', ')} WHERE id = $${values.length}`;
-      return sql.raw(query, values);
+      const { id, nome, codice, descrizione } = update;
+      return sql`
+        UPDATE prodotti
+        SET nome = ${nome}, codice = ${codice}, descrizione = ${descrizione}
+        WHERE id = ${id};
+      `;
     });
 
     await Promise.all(promises);
