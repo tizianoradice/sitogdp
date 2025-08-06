@@ -2,10 +2,10 @@
   "name": "sito",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-  "build": "npm install && echo 'Build process completed.'"
-},
-  "author": "",
-  "license": "ISC"
+    "build": "npm install && echo 'Build completed'"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.1"
+  }
 }
