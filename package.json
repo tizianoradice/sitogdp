@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'No build command needed for a simple static site' "
-  },
+  "build": "npm install && echo 'Build process completed.'"
+},
   "author": "",
   "license": "ISC"
 }
