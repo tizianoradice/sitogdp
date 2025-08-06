@@ -1,33 +1,35 @@
-// netlify/functions/add-product.js
 import { neon } from '@neondatabase/serverless';
 
 export const handler = async (event, context) => {
-  // Ensure the function only responds to POST requests.
+  // Verifichiamo se l'HTTP method è POST
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
+  // Eseguiamo la verifica della password
+  const password = event.headers['x-password'];
+  if (password !== process.env.ADMIN_PASSWORD) {
+    return { statusCode: 401, body: 'Unauthorized: Invalid password' };
+  }
+
   try {
-    // Parse the JSON data sent from the client.
     const { nome, codice, descrizione, prezzo } = JSON.parse(event.body);
-    
-    // Connect to the database using the environment variable.
     const sql = neon(process.env.NETLIFY_DATABASE_URL);
     
-    // Insert the new product data into the 'prodotti' table.
+    // Inserisce il nuovo prodotto nel database
     await sql`
       INSERT INTO prodotti (nome, codice, descrizione, prezzo)
       VALUES (${nome}, ${codice}, ${descrizione}, ${prezzo});
     `;
 
     return {
-      statusCode: 201, // 201 Created status code indicates success.
-      body: JSON.stringify({ message: 'Product added successfully' }),
+      statusCode: 201, 
+      body: JSON.stringify({ message: 'Prodotto aggiunto con successo' }),
     };
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Failed to add product' }),
+      body: JSON.stringify({ error: `Errore durante l'aggiunta del prodotto: ${error.message}` }),
     };
   }
 };

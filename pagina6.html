@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LISTA PRODOTTI</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="tabella-prodotti.css"> </head>
+    <link rel="stylesheet" href="tabella-prodotti.css"> 
+</head>
 <body class="pagina-interna6">
     <div class="contenuto">
         <h1>Lista Prodotti</h1>
+        <div class="accesso-protetto">
+            <input type="password" id="password-input" placeholder="Inserisci la password">
+            <button id="carica-prodotti">Carica Prodotti</button>
+        </div>
         <table id="tabella-prodotti">
             <thead>
                 <tr>
@@ -22,6 +27,7 @@
                 </tbody>
         </table>
         <button id="aggiungi-riga">Aggiungi Prodotto</button>
+        <button id="salva-prodotto" style="display:none;">Salva</button>
     </div>
     <script src="script-prodotti.js"></script>
 </body>
