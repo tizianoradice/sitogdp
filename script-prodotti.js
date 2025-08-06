@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 const nuovaRiga = document.createElement('tr');
                 nuovaRiga.dataset.id = prodotto.id;
                 nuovaRiga.innerHTML = `
-                    <td>${prodotto.nome}</td>
-                    <td>${prodotto.codice}</td>
-                    <td>${prodotto.descrizione}</td>
+                    <td data-label="Nome Prodotto">${prodotto.nome}</td>
+                    <td data-label="Codice">${prodotto.codice}</td>
+                    <td data-label="Descrizione">${prodotto.descrizione}</td>
                 `;
                 corpoTabella.appendChild(nuovaRiga);
             });
@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 const nuovaRiga = document.createElement('tr');
                 nuovaRiga.dataset.id = prodotto.id;
                 nuovaRiga.innerHTML = `
-                    <td class="editable" data-col="nome">${prodotto.nome}</td>
-                    <td class="editable" data-col="codice">${prodotto.codice}</td>
-                    <td class="editable" data-col="descrizione">${prodotto.descrizione}</td>
+                    <td class="editable" data-label="Nome Prodotto">${prodotto.nome}</td>
+                    <td class="editable" data-label="Codice">${prodotto.codice}</td>
+                    <td class="editable" data-label="Descrizione">${prodotto.descrizione}</td>
                 `;
                 corpoTabella.appendChild(nuovaRiga);
             });
@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const modifiche = [];
         const nuovi = [];
 
-        // Raccoglie i dati delle righe modificate
         righeModificate.forEach(riga => {
             const id = riga.dataset.id;
             const nome = riga.cells[0].textContent;
@@ -94,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
             modifiche.push({ id, nome, codice, descrizione });
         });
 
-        // Raccoglie i dati dei nuovi prodotti
         righeNuove.forEach(riga => {
             const nome = riga.cells[0].querySelector('input').value;
             const codice = riga.cells[1].querySelector('input').value;
@@ -174,9 +172,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const nuovaRiga = document.createElement('tr');
         nuovaRiga.dataset.id = '';
         nuovaRiga.innerHTML = `
-            <td class="editable"><input type="text" placeholder="Nome Prodotto"></td>
-            <td class="editable"><input type="text" placeholder="Codice"></td>
-            <td class="editable"><input type="text" placeholder="Descrizione"></td>
+            <td class="editable" data-label="Nome Prodotto"><input type="text" placeholder="Nome Prodotto"></td>
+            <td class="editable" data-label="Codice"><input type="text" placeholder="Codice"></td>
+            <td class="editable" data-label="Descrizione"><input type="text" placeholder="Descrizione"></td>
         `;
         corpoTabella.appendChild(nuovaRiga);
     });

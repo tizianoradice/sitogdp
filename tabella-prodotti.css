@@ -40,3 +40,43 @@
 .editable {
     cursor: pointer;
 }
+
+/* Stili specifici per schermi piccoli (es. cellulari) */
+@media (max-width: 600px) {
+    /* La tabella si estenderà sull'intera larghezza del display */
+    #tabella-prodotti, .contenuto {
+        width: 100%;
+        overflow-x: auto; /* Permette lo scorrimento orizzontale */
+    }
+
+    /* Le celle della tabella verranno visualizzate in blocco per una migliore leggibilità */
+    #tabella-prodotti thead {
+        display: none; /* Nasconde l'intestazione della tabella */
+    }
+
+    #tabella-prodotti tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+    }
+
+    #tabella-prodotti td {
+        display: block;
+        text-align: right;
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    /* Etichetta per le celle, visibile solo su mobile */
+    #tabella-prodotti td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+}
