@@ -8,6 +8,9 @@
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    white-space: nowrap; /* Previene il "a capo" indesiderato */
+    overflow: hidden; /* Nasconde il testo in eccesso */
+    text-overflow: ellipsis; /* Aggiunge i puntini di sospensione (...) */
 }
 
 #tabella-prodotti th {
@@ -15,20 +18,17 @@
     color: black;
 }
 
-/* Larghezza delle colonne come richiesto */
+/* Larghezza delle colonne basata sul numero di caratteri */
 #tabella-prodotti th:nth-child(1), #tabella-prodotti td:nth-child(1) {
-    width: 35%; /* Nome Prodotto più largo */
+    width: 30ch; /* Nome Prodotto (30 caratteri) */
 }
 
 #tabella-prodotti th:nth-child(2), #tabella-prodotti td:nth-child(2) {
-    width: 15%; /* Codice più stretto */
-    max-width: 12ch; /* Limita a 12 caratteri */
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 8ch; /* Codice (8 caratteri) */
 }
 
 #tabella-prodotti th:nth-child(3), #tabella-prodotti td:nth-child(3) {
-    width: 50%; /* Descrizione più larga */
+    width: 30ch; /* Descrizione (30 caratteri) */
 }
 
 #tabella-prodotti input {
