@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 corpoTabella.appendChild(nuovaRiga);
             });
-            // Nasconde i bottoni di modifica quando si è in modalità visualizzazione
             bottoneAggiungi.style.display = 'none';
             bottoneSalva.style.display = 'none';
         } catch (error) {
@@ -81,20 +80,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         const righeNuove = Array.from(corpoTabella.querySelectorAll('tr[data-id=""]'));
-        const righeModificate = Array.from(corpoTabella.querySelectorAll('tr[data-id]'));
+        const righeEsistenti = Array.from(corpoTabella.querySelectorAll('tr[data-id]:not([data-id=""])'));
+        
         const modifiche = [];
         const nuovi = [];
 
-        righeModificate.forEach(riga => {
+        // Raccoglie le modifiche sulle righe esistenti
+        righeEsistenti.forEach(riga => {
             const id = riga.dataset.id;
             const nome = riga.cells[0].textContent;
             const codice = riga.cells[1].textContent;
             const descrizione = riga.cells[2].textContent;
-            if (id && riga.dataset.originalValues && (riga.dataset.originalValues !== JSON.stringify({ nome, codice, descrizione }))) {
+            
+            const originalValues = JSON.parse(riga.dataset.originalValues || '{}');
+            
+            // Controlla se i valori sono effettivamente cambiati
+            if (nome !== originalValues.nome || codice !== originalValues.codice || descrizione !== originalValues.descrizione) {
                 modifiche.push({ id, nome, codice, descrizione });
             }
         });
 
+        // Raccoglie i nuovi prodotti
         righeNuove.forEach(riga => {
             const nome = riga.cells[0].querySelector('input').value;
             const codice = riga.cells[1].querySelector('input').value;
@@ -129,9 +135,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             alert('Modifiche salvate con successo!');
+            // Dopo il salvataggio, si torna alla modalità visualizzazione per il visitatore
             visualizzaProdotti();
-            bottoneAggiungi.style.display = 'none';
-            bottoneSalva.style.display = 'none';
         } catch (error) {
             alert(`Errore: ${error.message}`);
         }
@@ -145,18 +150,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!password || !cella || cella.querySelector('input')) return;
 
         const riga = cella.parentElement;
-        const colonnaIndex = cella.cellIndex;
-        const idProdotto = riga.dataset.id;
-        const valoreOriginale = cella.textContent;
-
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.value = valoreOriginale;
-
-        cella.textContent = '';
-        cella.appendChild(input);
-        input.focus();
-
         if (!riga.dataset.originalValues) {
              riga.dataset.originalValues = JSON.stringify({
                 nome: riga.cells[0].textContent,
@@ -165,6 +158,15 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
+        const valoreOriginale = cella.textContent;
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = valoreOriginale;
+
+        cella.textContent = '';
+        cella.appendChild(input);
+        input.focus();
+
         input.addEventListener('blur', function() {
             const nuovoValore = input.value;
             cella.textContent = nuovoValore;
@@ -173,7 +175,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Event listener per il pulsante "Visualizza Prodotti"
-    // Se la password è presente, il bottone avvia la modalità di modifica.
     bottoneCarica.addEventListener('click', function() {
         const password = passwordInput.value;
         if (password) {
@@ -194,9 +195,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const nuovaRiga = document.createElement('tr');
         nuovaRiga.dataset.id = '';
         nuovaRiga.innerHTML = `
-            <td><input type="text" placeholder="Nome Prodotto"></td>
-            <td><input type="text" placeholder="Codice"></td>
-            <td><input type="text" placeholder="Descrizione"></td>
+            <td class="editabile"><input type="text" placeholder="Nome Prodotto"></td>
+            <td class="editabile"><input type="text" placeholder="Codice"></td>
+            <td class="editabile"><input type="text" placeholder="Descrizione"></td>
         `;
         corpoTabella.appendChild(nuovaRiga);
     });
