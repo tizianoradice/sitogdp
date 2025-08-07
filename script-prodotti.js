@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 corpoTabella.appendChild(nuovaRiga);
             });
-            bottoneAggiungi.style.display = 'none';
+            bottoneAggiungi.style.display = 'block'; 
             bottoneSalva.style.display = 'none';
         } catch (error) {
             console.error('Errore durante il recupero dei prodotti:', error);

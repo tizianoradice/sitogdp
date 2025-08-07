@@ -1,16 +1,16 @@
 #tabella-prodotti {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 10px; 
 }
 
 #tabella-prodotti th, #tabella-prodotti td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
-    white-space: nowrap; /* Previene il "a capo" indesiderato */
-    overflow: hidden; /* Nasconde il testo in eccesso */
-    text-overflow: ellipsis; /* Aggiunge i puntini di sospensione (...) */
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
 }
 
 #tabella-prodotti th {
@@ -18,17 +18,16 @@
     color: black;
 }
 
-/* Larghezza delle colonne basata sul numero di caratteri */
 #tabella-prodotti th:nth-child(1), #tabella-prodotti td:nth-child(1) {
-    width: 30ch; /* Nome Prodotto (30 caratteri) */
+    width: 30ch;
 }
 
 #tabella-prodotti th:nth-child(2), #tabella-prodotti td:nth-child(2) {
-    width: 8ch; /* Codice (8 caratteri) */
+    width: 8ch;
 }
 
 #tabella-prodotti th:nth-child(3), #tabella-prodotti td:nth-child(3) {
-    width: 30ch; /* Descrizione (30 caratteri) */
+    width: 30ch;
 }
 
 #tabella-prodotti input {
@@ -36,22 +35,33 @@
     box-sizing: border-box;
 }
 
-/* Stile per le celle modificabili */
 .editable {
     cursor: pointer;
 }
 
-/* Stili specifici per schermi piccoli (es. cellulari) */
+/* Stile per i pulsanti */
+.gestione-prodotti {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pulsanti-sinistra,
+.campi-centrali,
+.pulsanti-destra {
+    display: flex;
+    gap: 10px;
+}
+
 @media (max-width: 600px) {
-    /* La tabella si estenderà sull'intera larghezza del display */
     #tabella-prodotti, .contenuto {
         width: 100%;
-        overflow-x: auto; /* Permette lo scorrimento orizzontale */
+        overflow-x: auto;
     }
 
-    /* Le celle della tabella verranno visualizzate in blocco per una migliore leggibilità */
     #tabella-prodotti thead {
-        display: none; /* Nasconde l'intestazione della tabella */
+        display: none;
     }
 
     #tabella-prodotti tr {
@@ -68,7 +78,6 @@
         padding-left: 50%;
     }
 
-    /* Etichetta per le celle, visibile solo su mobile */
     #tabella-prodotti td::before {
         content: attr(data-label);
         position: absolute;
@@ -78,5 +87,15 @@
         white-space: nowrap;
         text-align: left;
         font-weight: bold;
+    }
+
+    .gestione-prodotti {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .campi-centrali,
+    .pulsanti-destra {
+        margin-top: 10px;
     }
 }
