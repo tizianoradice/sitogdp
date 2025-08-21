@@ -13,9 +13,10 @@
     text-overflow: ellipsis;
 }
 
+/* Modificato: sfondo verde scuro e testo grigio chiaro per i titoli */
 #tabella-prodotti th {
-    background-color: #f2f2f2;
-    color: black;
+    background-color: #004d40; /* Sostituito con un verde scuro */
+    color: #bdbdbd; /* Sostituito con un grigio chiaro */
 }
 
 /* Modificato: "Nome Prodotto" ora ha una larghezza di 60ch (30ch + 30ch) */
