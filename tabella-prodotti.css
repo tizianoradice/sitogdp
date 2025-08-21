@@ -5,7 +5,8 @@
 }
 
 #tabella-prodotti th, #tabella-prodotti td {
-    border: 1px solid #ddd;
+    /* Rimuove i bordi delle celle */
+    border: none;
     padding: 8px;
     text-align: left;
     white-space: nowrap; 
@@ -67,7 +68,8 @@
     #tabella-prodotti tr {
         display: block;
         margin-bottom: 10px;
-        border: 1px solid #ddd;
+        /* Rimuove il bordo per la vista mobile */
+        border: none;
     }
 
     #tabella-prodotti td {
