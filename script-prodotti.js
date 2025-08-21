@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 nuovaRiga.innerHTML = `
                     <td data-label="Nome Prodotto">${prodotto.nome}</td>
                     <td data-label="Codice">${prodotto.codice}</td>
-                    <td data-label="Descrizione">${prodotto.descrizione}</td>
                 `;
                 corpoTabella.appendChild(nuovaRiga);
             });
@@ -60,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 nuovaRiga.innerHTML = `
                     <td class="editable" data-label="Nome Prodotto">${prodotto.nome}</td>
                     <td class="editable" data-label="Codice">${prodotto.codice}</td>
-                    <td class="editable" data-label="Descrizione">${prodotto.descrizione}</td>
                 `;
                 corpoTabella.appendChild(nuovaRiga);
             });
@@ -89,16 +87,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const id = riga.dataset.id;
             const nome = riga.cells[0].textContent;
             const codice = riga.cells[1].textContent;
-            const descrizione = riga.cells[2].textContent;
-            modifiche.push({ id, nome, codice, descrizione });
+            modifiche.push({ id, nome, codice });
         });
 
         righeNuove.forEach(riga => {
             const nome = riga.cells[0].querySelector('input').value;
             const codice = riga.cells[1].querySelector('input').value;
-            const descrizione = riga.cells[2].querySelector('input').value;
             if (nome && codice) {
-                nuovi.push({ nome, codice, descrizione });
+                nuovi.push({ nome, codice });
             }
         });
 
@@ -174,7 +170,6 @@ document.addEventListener('DOMContentLoaded', function() {
         nuovaRiga.innerHTML = `
             <td class="editable" data-label="Nome Prodotto"><input type="text" placeholder="Nome Prodotto"></td>
             <td class="editable" data-label="Codice"><input type="text" placeholder="Codice"></td>
-            <td class="editable" data-label="Descrizione"><input type="text" placeholder="Descrizione"></td>
         `;
         corpoTabella.appendChild(nuovaRiga);
     });
