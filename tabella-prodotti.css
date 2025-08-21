@@ -57,19 +57,25 @@
 
 /* Modifiche per i pulsanti e il campo password */
 .gestione-prodotti button {
-    background-color: #004d40; /* Stesso verde scuro dei titoli */
-    color: #bdbdbd; /* Stesso grigio chiaro dei titoli */
-    font-weight: bold; /* Testo in grassetto */
-    border: 1px solid #bdbdbd; /* Bordo sottile grigio chiaro */
+    background-color: #004d40;
+    color: #bdbdbd;
+    font-weight: bold;
+    border: 1px solid #bdbdbd;
     padding: 8px 12px;
     cursor: pointer;
 }
 
 .gestione-prodotti input[type="text"] {
-    background-color: #004d40; /* Sfondo verde scuro */
-    color: #bdbdbd; /* Testo grigio chiaro */
-    border: 1px solid #bdbdbd; /* Bordo sottile grigio chiaro */
+    background-color: #004d40;
+    color: #bdbdbd; /* Modificato: il colore del testo del campo password */
+    border: 1px solid #bdbdbd;
     padding: 8px;
+}
+
+/* Modifica per il placeholder, così che anche il testo "Inserisci la password" sia grigio chiaro */
+.gestione-prodotti input::placeholder {
+    color: #bdbdbd;
+    opacity: 1; /* Rende il colore visibile su Firefox */
 }
 
 @media (max-width: 600px) {
