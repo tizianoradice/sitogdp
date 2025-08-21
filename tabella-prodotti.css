@@ -13,23 +13,18 @@
     text-overflow: ellipsis;
 }
 
-/* Modificato: sfondo verde scuro e testo grigio chiaro per i titoli */
 #tabella-prodotti th {
-    background-color: #004d40; /* Sostituito con un verde scuro */
-    color: #bdbdbd; /* Sostituito con un grigio chiaro */
+    background-color: #004d40;
+    color: #bdbdbd;
 }
 
-/* Modificato: "Nome Prodotto" ora ha una larghezza di 60ch (30ch + 30ch) */
 #tabella-prodotti th:nth-child(1), #tabella-prodotti td:nth-child(1) {
     width: 60ch;
 }
 
-/* Modificato: "Codice" rimane invariato */
 #tabella-prodotti th:nth-child(2), #tabella-prodotti td:nth-child(2) {
     width: 8ch;
 }
-
-/* Rimosse le regole per la colonna "Descrizione" */
 
 #tabella-prodotti input {
     width: 90%;
@@ -53,6 +48,11 @@
 .pulsanti-destra {
     display: flex;
     gap: 10px;
+}
+
+/* Aggiunta per allineare il pulsante a destra */
+.campi-centrali {
+    margin-left: auto;
 }
 
 @media (max-width: 600px) {
