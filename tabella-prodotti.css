@@ -55,6 +55,23 @@
     margin-left: auto;
 }
 
+/* Modifiche per i pulsanti e il campo password */
+.gestione-prodotti button {
+    background-color: #004d40; /* Stesso verde scuro dei titoli */
+    color: #bdbdbd; /* Stesso grigio chiaro dei titoli */
+    font-weight: bold; /* Testo in grassetto */
+    border: 1px solid #bdbdbd; /* Bordo sottile grigio chiaro */
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.gestione-prodotti input[type="text"] {
+    background-color: #004d40; /* Sfondo verde scuro */
+    color: #bdbdbd; /* Testo grigio chiaro */
+    border: 1px solid #bdbdbd; /* Bordo sottile grigio chiaro */
+    padding: 8px;
+}
+
 @media (max-width: 600px) {
     #tabella-prodotti, .contenuto {
         width: 100%;
