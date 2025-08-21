@@ -44,18 +44,19 @@
 }
 
 .pulsanti-sinistra,
-.campi-centrali,
 .pulsanti-destra {
     display: flex;
     gap: 10px;
 }
 
-/* Aggiunta per allineare il pulsante a destra */
+/* Modifica per centrare il campo password e allineare il pulsante a destra */
 .campi-centrali {
-    margin-left: auto;
+    flex-grow: 1; /* Permette al div di espandersi per occupare lo spazio disponibile */
+    display: flex;
+    justify-content: center; /* Centra l'input orizzontalmente */
 }
 
-/* Modifiche per i pulsanti e il campo password */
+/* Stile per i pulsanti e il campo password */
 .gestione-prodotti button {
     background-color: #004d40;
     color: #bdbdbd;
@@ -67,15 +68,14 @@
 
 .gestione-prodotti input[type="text"] {
     background-color: #004d40;
-    color: #bdbdbd; /* Modificato: il colore del testo del campo password */
+    color: #bdbdbd;
     border: 1px solid #bdbdbd;
     padding: 8px;
 }
 
-/* Modifica per il placeholder, così che anche il testo "Inserisci la password" sia grigio chiaro */
 .gestione-prodotti input::placeholder {
     color: #bdbdbd;
-    opacity: 1; /* Rende il colore visibile su Firefox */
+    opacity: 1;
 }
 
 @media (max-width: 600px) {
